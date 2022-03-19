@@ -1,0 +1,197 @@
+.pflex {
+  display: flex;
+}
+
+.icon {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btnCrear {
+  background-image: url("../pages/assets/img/help/btnCrear.png");
+  width: 50px;
+  height: 50px;
+}
+.optReco {
+  background-image: url("../pages/assets/img/help/optReco.png");
+  width: 100px;
+  height: 100px;
+}
+.formReco {
+  background-image: url("../pages/assets/img/help/formReco.png");
+  width: 400px;
+  height: 300px;
+}
+.uploadImg {
+  background-image: url("../pages/assets/img/help/uploadImg.png");
+  width: 250px;
+  height: 200px;
+}
+
+.btnNext {
+  background-image: url("../pages/assets/img/help/btnNext.png");
+  width: 100px;
+  height: 30px;
+}
+.formCharact {
+  background-image: url("../pages/assets/img/help/formCharact.png");
+  width: 400px;
+  height: 300px;
+}
+
+.btnAdd {
+  background-image: url("../pages/assets/img/help/btnAdd.png");
+  width: 150px;
+  height: 40px;
+}
+
+.iconDeleteCharact {
+  background-image: url("../pages/assets/img/help/iconDeleteCharact.png");
+  width: 40px;
+  height: 40px;
+}
+
+.omitir {
+  background-image: url("../pages/assets/img/help/omitir.png");
+  width: 100px;
+  height: 30px;
+}
+.publicar {
+  background-image: url("../pages/assets/img/help/publicar.png");
+  width: 100px;
+  height: 30px;
+}
+
+.optThinks {
+  background-image: url("../pages/assets/img/help/optThinks.png");
+  width: 100px;
+  height: 100px;
+}
+
+.formThink {
+  background-image: url("../pages/assets/img/help/formThink.png");
+  width: 400px;
+  height: 300px;
+}
+
+.btnApprove {
+  background-image: url("../pages/assets/img/help/btnApprove.png");
+  width: 40px;
+  height: 40px;
+}
+
+.btnDesapprove {
+  background-image: url("../pages/assets/img/help/btnDesapprove.png");
+  width: 40px;
+  height: 40px;
+}
+
+.btnApprovePress {
+  background-image: url("../pages/assets/img/help/btnApprovePress.png");
+  width: 50px;
+  height: 40px;
+}
+
+.iconComment {
+  background-image: url("../pages/assets/img/help/iconComment.png");
+  width: 40px;
+  height: 40px;
+}
+
+.iconSaveComment {
+  background-image: url("../pages/assets/img/help/iconSaveComment.png");
+  width: 40px;
+  height: 40px;
+}
+
+.iconPoints {
+  background-image: url("../pages/assets/img/help/iconPoints.png");
+  width: 40px;
+  height: 40px;
+}
+
+.copyPost {
+  background-image: url("../pages/assets/img/help/copyPost.png");
+  width: 40px;
+  height: 40px;
+}
+
+.deletePost {
+  background-image: url("../pages/assets/img/help/deletePost.png");
+  width: 40px;
+  height: 40px;
+}
+.avatarMenu {
+  background-image: url("../pages/assets/img/help/avatarMenu.png");
+  width: 90px;
+  height: 50px;
+}
+.menuMain {
+  background-image: url("../pages/assets/img/help/menuMain.png");
+  width: 200px;
+  height: 200px;
+}
+
+.updatePerfil {
+  background-image: url("../pages/assets/img/help/updatePerfil.png");
+  width: 250px;
+  height: 250px;
+}
+
+.guardar {
+  background-image: url("../pages/assets/img/help/guardar.png");
+  width: 150px;
+  height: 40px;
+}
+.btnLogin {
+  background-image: url("../pages/assets/img/help/btnLogin.png");
+  width: 150px;
+  height: 40px;
+}
+.register {
+  background-image: url("../pages/assets/img/help/register.png");
+  width: 100px;
+  height: 30px;
+}
+.sendCode {
+  background-image: url("../pages/assets/img/help/sendCode.png");
+  width: 150px;
+  height: 40px;
+}
+.finish {
+  background-image: url("../pages/assets/img/help/finish.png");
+  width: 150px;
+  height: 40px;
+}
+
+.send {
+  background-image: url("../pages/assets/img/help/send.png");
+  width: 130px;
+  height: 40px;
+}
+.clickHere {
+  background-image: url("../pages/assets/img/help/clickHere.png");
+  width: 150px;
+  height: 40px;
+}
+.restablecer {
+  background-image: url("../pages/assets/img/help/restablecer.png");
+  width: 160px;
+  height: 40px;
+}
+.search {
+  background-image: url("../pages/assets/img/help/search.png");
+  width: 300px;
+  height: 400px;
+}
+.btnSearch {
+  background-image: url("../pages/assets/img/help/btnSearch.png");
+  width: 90px;
+  height: 40px;
+}
+.filterType {
+  background-image: url("../pages/assets/img/help/filterType.png");
+  width: 300px;
+  height: 300px;
+}

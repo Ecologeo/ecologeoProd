@@ -1,0 +1,85 @@
+.blockColumns {
+  display: flex;
+  margin-bottom: 1.75em;
+  flex-wrap: wrap;
+}
+
+.blockColumns div {
+  text-align: left;
+}
+
+.containerHelp {
+  width: 90%;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.header {
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  padding: 15px;
+}
+
+.columnLeft {
+  border-right: 1px solid #cccccc;
+  width: 100%;
+}
+
+.columnLeft ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*.columnLeft li {
+  list-style: none;
+  padding: 20px;
+  cursor: pointer;
+}
+.columnLeft li:hover {
+  background-color: #3cb371;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+}*/
+
+.columnLeft a {
+  border-bottom: none;
+  color: #262626;
+  font-size: 14px;
+}
+
+.divli {
+  list-style: none;
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+}
+.divli:hover {
+  background-color: #3cb371;
+  color: #fff;
+}
+
+.liActive {
+  background-color: #3cb371;
+  color: #fff;
+}
+
+.columnRight {
+  width: 100%;
+}
+
+.divLinkWE {
+  text-align: center;
+}
+
+.linkWE {
+  padding: 20px;
+  align-items: center;
+  display: inline-flex;
+}
+
+.spanWE {
+  padding-left: 5px;
+}

@@ -1,0 +1,153 @@
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.avatarPerfil {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.m10 {
+  margin: 10px;
+}
+.m15 {
+  margin: 15px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.cardBody {
+  justify-content: "center";
+  margin-top: 10px;
+}
+
+.cardComment {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 15px;
+}
+
+.loader {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.linkAll {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.linkName {
+  font-weight: 600;
+}
+
+.linkName::hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.linkNameRole {
+  display: block;
+}
+
+.cardHome {
+  background-color: #fff;
+  width: 300px;
+  min-width: 300px;
+  margin: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 20%);
+  border-radius: 5px;
+  padding: 20px 0px 10px 0px;
+}
+
+.card {
+  background-color: #fff;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 20%);
+  border-radius: 5px;
+  padding: 20px 0px 10px 0px;
+}
+.cardSkeleton {
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+.cardUser {
+  background-color: #fff;
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 20%);
+  border-radius: 5px;
+  padding: 20px 0px 10px 0px;
+  min-height: 300px;
+  height: 300px;
+}
+
+.cardTypes {
+  width: 250px;
+  background: #fff;
+  text-align: center;
+  padding-top: 5px;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+    0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+.cardFoot {
+  width: 250px;
+  text-align: center;
+  padding-top: 5px;
+  background: transparent;
+}
+.cardFoot a {
+  color: #3cb371;
+}
+
+.contanier {
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 20px 0px 10px 0px;
+}
+
+.linkComment {
+  color: blue;
+}
+
+@media (max-width: 700px) {
+  .card {
+    width: 100vw;
+  }
+  .cardSkeleton {
+    width: 100vw;
+  }
+  .contanier {
+    width: 100vw;
+  }
+  .avatarPerfil {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (max-width: 370px) {
+  .cardHome {
+    margin: 10px 0;
+  }
+}

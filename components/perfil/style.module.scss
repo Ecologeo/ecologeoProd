@@ -1,0 +1,189 @@
+.contanier {
+  padding: 0px 20px;
+}
+
+.subContanier {
+  display: flex;
+  width: 100%;
+}
+.subContanierShow {
+  display: flex;
+  width: 100%;
+}
+
+.boxImg {
+  text-align: center;
+  width: 50%;
+}
+
+.boxPerfilHome {
+  text-align: center;
+}
+
+.boxImgPerfil {
+  text-align: left;
+  width: 33%;
+}
+.boxTextPerfil {
+  width: 67%;
+}
+
+.boxInputs {
+  width: 50%;
+}
+
+.boxInputsUrls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.boxLinks {
+  display: flex;
+  justify-content: space-around;
+}
+
+.iconInfo {
+  margin-left: 5px;
+}
+
+.boxImageNft {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #747474;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.containerNFT {
+  display: block;
+  width: 100%;
+}
+
+.containerDivNFT {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.filterNft {
+  display: flex;
+  align-items: center;
+}
+
+.namePointNft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 7px;
+}
+
+.labelFiltros {
+  text-align: left;
+  margin: 10px;
+}
+
+.inputNft {
+  text-align: left;
+  padding-top: 15px;
+  margin: 10px;
+}
+
+.imgNft {
+  //margin-bottom: 20px;
+}
+
+.divImgNft {
+  width: 150px;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.boxPoints {
+  display: flex;
+  align-items: center;
+}
+
+.divNFTGet {
+  text-align: center;
+}
+
+.boxPointsCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  border: 0px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.linkBtn {
+  background-color: #fff;
+  color: #3a7e9f;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.linkBtn:hover {
+  background-color: #edebeb;
+}
+
+.pWithOutStartEnd {
+  margin-block: 0px 0.2em;
+}
+.pnameSearch {
+  margin-block: 0px;
+}
+.pUsernameSearch {
+  margin-block: 0px;
+  color: #747474;
+  font-size: 0.9em;
+}
+
+.aboutPerfil {
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.iconUrls {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.textFollow {
+  font-weight: 600;
+  color: rgba(70, 70, 70, 0.87);
+}
+
+@media (max-width: 900px) {
+  .subContanier {
+    display: block;
+  }
+  .boxImg {
+    width: 100%;
+  }
+  .boxInputs {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .boxInputsUrls {
+    display: block;
+  }
+}

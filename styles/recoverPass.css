@@ -1,0 +1,46 @@
+.pass-wrapper {
+  border-radius: 4px;
+  position: relative;
+  margin-top: 8px;
+  background: rgba(22, 24, 35, 0.06);
+  border: 1.5px solid rgba(22, 24, 35, 0.16);
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  line-height: 44px;
+  margin-top: 12px;
+  box-sizing: content-box;
+}
+i {
+  position: absolute;
+  right: 1%;
+  top: 3px;
+}
+i:hover {
+  color: #3cb371;
+  cursor: pointer;
+}
+input {
+  margin: 1px;
+  border: none;
+  width: 100%;
+}
+.error {
+  color: #dc3545;
+}
+.strong-password {
+  border: 1px solid #198754;
+}
+.medium-password {
+  border: 1px solid #ffc107;
+}
+.weak-password {
+  border: 1px solid #dc3545;
+}
+
+input:focus {
+  border-color: none !important;
+  outline: none !important;
+  outline-width: none !important;
+  box-shadow: 0px;
+}
