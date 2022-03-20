@@ -12,6 +12,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import SearchEco from '../components/header/search';
 import ModalAuth from '../components/auth/modalAuth';
+import Link from "next/link";
 
 
 function Home(props: any) {
@@ -54,10 +55,10 @@ function Home(props: any) {
                             <div className="max-w-2xl mx-auto mb-3">
                                 <h2 className="text-3xl lg:text-5xl lg:leading-normal mb-4 font-bold font-heading wow animate__animated animate__fadeIn">
                                     Campañas <br />
-                                    <span className="text-blue-500">ambientalistas</span>
+                                    <span className="text-blue-500">Ecológicas</span>
                                 </h2>
                                 <p className="text-blueGray-400 leading-relaxed wow animate__animated animate__fadeIn">
-                                    Únete a otros <strong className="text-blue-500">ambientalistas</strong>, e impacta positivamente en {" "}
+                                    Únete a otros <strong className="text-blue-500">consumidores responsables</strong>, e impacta positivamente en {" "}
                                     <br/>
                                     <span className="typewrite d-inline text-brand">
                                         <TextEffect text1="las empresas" text2="la sociedad" text3="el planeta" />
@@ -65,12 +66,15 @@ function Home(props: any) {
                                 </p>
                             </div>
                             <div>
-                                <a onClick={() => {setShow(!show); setOptionAuth(3); }} className="btn-primary py-4 px-8 mr-2 wow animate__animated animate__fadeIn hover-up-2" href="#key-features">
+                                <a onClick={() => {setShow(!show); setOptionAuth(3); }} className="btn-primary py-4 px-8 mr-2 wow animate__animated animate__fadeIn hover-up-2" href="#">
                                    Inicia
                                 </a>
-                                <a className="btn-white wow animate__animated animate__fadeIn hover-up-2" data-wow-delay=".3s" href="#how-we-work">
-                                    ¿Que hacemos?
-                                </a>
+                                <Link href="/about">
+                                    <a className="btn-white wow animate__animated animate__fadeIn hover-up-2" data-wow-delay=".3s" href="#">
+                                        ¿Que hacemos?
+                                    </a>
+                                </Link>
+                                
                             </div>
                         </div>
                     </div>

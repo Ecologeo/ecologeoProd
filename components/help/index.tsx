@@ -117,7 +117,6 @@ export default function Help() {
                 <span className={styles.spanWE}>info@ecologeo.com</span> </a>
             </div>
             
-            <h1>Ayuda</h1>
             <div className={styles.blockColumns}>
                 <div className={styles.columnLeft}>
 

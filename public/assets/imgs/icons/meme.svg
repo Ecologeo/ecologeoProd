@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="68.791664mm"
+   height="26.458332mm"
+   viewBox="0 0 68.791665 26.458331"
+   version="1.1"
+   id="svg1075"
+   sodipodi:docname="meme.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <defs
+     id="defs1069" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="32.382433"
+     inkscape:cy="3.2198975"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g1681"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1072">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-53.229608,-584.7802)">
+    <g
+       id="g1067"
+       transform="matrix(0.26458333,0,0,0.26458333,310.65091,163.78484)">
+      <g
+         id="g1677">
+        <g
+           id="g1681"
+           transform="matrix(0.4985532,0,0,1.0387072,-383.50352,3.3673297)">
+          <g
+             id="Pixel_glasses-3"
+             data-name="Pixel glasses"
+             transform="matrix(2.005804,0,0,0.96273523,-972.75572,1476.1217)"
+             style="fill:#3cb371;fill-opacity:1">
+            <path
+               class="cls-1"
+               d="m -64.456918,74.538034 h -10 v -10 h 10 z m 10,0 h 10 v -20 h -20 v 10 h 10 z m 189.999998,-10 h -10 v 10 h 10 z m 10,10 h 10 v -20 h -20 v 10 h 10 z M 45.543082,144.53803 v 10 h 50 v -10 h 9.999998 v -10 h 10 v -10 h 10 v -20 h -10 v -9.999996 h 10 v -20 h -10 v 10 h -10 v 10 H -74.456918 v -20 h -10 v 10 h -10 v 19.999996 h -10.000002 v 20 h 10.000002 v 10 h 10 v 10 h 10 v 10 h 50 v -10 h 10 v -10 h 9.9999996 v -10 h 10 v -20 H 15.543082 v 20 h 10 v 10 h 10 v 10 z"
+               id="path51"
+               style="fill:#3cb371;fill-opacity:1" />
+          </g>
+        </g>
+        <path
+           class="cls-2"
+           d="m -932.93092,1651.1636 h -10 v -10 h 10 z m 120,-10 h -10 v 10 h 10 z m -130,10 h -10 v 10 h 10 z m 120,0 h -10 v 10 h 10 z m 20,0 h -10 v 10 h 10 z m -130,10 h -10 v 10 h 10 z m 20,0 h -10 v 10 h 10 z m 100,0 h -10 v 10 h 10 z m 20,0 h -10 v 10 h 10 z m -110,10 h -10 v 10 h 10 z m 100,0 h -10 v 10 h 10 z m 20,0 h -10 v 10 h 10 z m -140,-20 h -10 v 10 h 10 z m 0,20 h -10 v 10 h 10 z"
+           id="path53-9"
+           style="fill:#ffffff;fill-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>
