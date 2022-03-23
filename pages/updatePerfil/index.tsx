@@ -9,6 +9,7 @@ import Posts from '../../components/foro/posts';
 import UpdatePerfil from '../../components/perfil/update';
 import { get } from '../../utils/SesionStorage';
 import ReactGA from 'react-ga4';
+import withAuth from '../../components/auth/withAuth';
 
 function UpPerfil(props:any) {
 
@@ -38,4 +39,4 @@ const mapDispatchToProps = (dispatch: any) => ({
   actions: bindActionCreators(foroAction, dispatch)
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(UpPerfil);
+export default withAuth(connect(mapStateToProps, mapDispatchToProps)(UpPerfil));

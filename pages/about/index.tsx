@@ -17,7 +17,6 @@ const About = () => {
                                     <br />
                                     <img className="h-8 mx-auto my-4" src="/assets/imgs/illustrations/igual.svg" alt="Reportes" />
                                     <span className="text-blue-500">Reportes de Ecologeo </span>
-                                    
                                 </h2>
                             </div>
                             <div className="w-full lg:w-1/2">

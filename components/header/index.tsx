@@ -77,9 +77,9 @@ function Header(props:any) {
           <SearchIcon color="action" fontSize="large" />
         </div>
         
-        <a href={"/selectNft/"+ (id_user?id_user: "NA")}>
+        {/*<a href={"/selectNft/"+ (id_user?id_user: "NA")}>
           <Avatar sx={{ bgcolor: '#E7912D', cursor: "pointer" }}><span style={{fontSize:'14px'}}>NFT</span></Avatar>
-        </a>
+        </a>*/}
         {tokenUser !== null ?
           <div >
             <Stack direction="row" spacing={2}>

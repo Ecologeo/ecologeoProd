@@ -72,7 +72,7 @@ export default function Search(props:any) {
         }
         let result = await axios({
             method: 'get',
-            url: config.url_api_foro + "/v1/api/post/searcheco",
+            url: "/api/post/query/v1-api-post-searcheco",
             params,
             headers: {
                 'Cache-Control': 'no-cache',

@@ -250,7 +250,7 @@ h6,
 hr,
 figure,
 pre {
-  margin: 0;
+  /*margin: 0;*/
 }
 button {
   background-color: transparent;
@@ -385,8 +385,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: inherit;
+  /*font-size: inherit;
+  font-weight: inherit;*/
 }
 /**
  * Reset links to optimize for opt-in styling instead of
@@ -442,7 +442,6 @@ samp {
  *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
  */
 img,
-svg,
 video,
 canvas,
 audio,
@@ -458,11 +457,11 @@ object {
  *
  * https://github.com/mozdevs/cssremedy/issues/14
  */
-img,
+/*img,
 video {
   max-width: 100%;
   height: auto;
-}
+}*/
 /**
  * Ensure the default browser behavior of the `hidden` attribute.
  */

@@ -94,7 +94,7 @@ export default function TagComment(props: any) {
             }
             let result = await axios({
                 method: 'get',
-                url: config.url_api_foro + "/v1/api/post/searchAccount",
+                url: "/api/post/query/v1-api-post-searchAccount",
                 params,
                 headers: {
                     'Cache-Control': 'no-cache',

@@ -5,11 +5,31 @@ import Image from 'next/image';
 import logo from '../../../pages/assets/img/logo.png';
 import styles from '../../../pages/home/style.module.scss';
 import ModalAuth from '../../../components/auth/modalAuth';
+import MenuUser from '../../../components/auth/menuUser';
+import { get } from '../../../utils/SesionStorage';
 
 const Header = ({handleHidden}) => {
     const [scroll, setScroll] = useState(0)
     const [show, setShow] = useState(false);
     const [optionAuth, setOptionAuth] = useState(1);
+    const [tokenUser, setToken] = useState(null);
+    const [id_user, setId_user] = useState('');
+    const [nameUser, setNameUser] = useState(null);
+  const [avatarUser, setAvatarUser] = useState(null)
+
+    useEffect(() => {
+        const name = get('@name_user');
+        const id = get('@id_user');
+        const avatarU = get('@path_avatar_user');
+        const token = get('@token');
+        setNameUser(name);
+        setAvatarUser(avatarU !==''?avatarU: avatar);
+        setToken(token)
+        setId_user(id)
+      }, []);
+
+
+
     useEffect(() => {
         document.addEventListener("scroll", () => {
           const scrollCheck = window.scrollY > 100
@@ -60,6 +80,12 @@ const Header = ({handleHidden}) => {
                                </Link>
                            </li>
                        </ul>
+                       {tokenUser !== null ?
+                       <MenuUser 
+                        avatarUser={avatarUser} 
+                        nameUser={nameUser}
+                        id_user={id_user}
+                        />:
                        <div className="hidden lg:block" >
                             <Link href="#">
                                 <a onClick={() => {setShow(!show); setOptionAuth(2); }} className="btn-accent hover-up-2">Inicia Sesión</a>
@@ -69,7 +95,8 @@ const Header = ({handleHidden}) => {
                                     Regístrate
                                 </a>
                             </Link>
-                        </div>
+
+                        </div>}
                         </div>
                         <div className="lg:hidden">
                             <button className="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-greem-700 rounded border border-blue-200 hover:border-blue-300 bg-btn" onClick={handleHidden}>

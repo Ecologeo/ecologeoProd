@@ -17,6 +17,7 @@ import { frequency } from "../create/data/frequency";
 import { capitalize } from '../../utils';
 import ModalImage from './modalImage';
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 export default function SumaryPost(props: any) {
@@ -190,17 +191,18 @@ export default function SumaryPost(props: any) {
 
             <div className={styleForo.cardBodySummary}>
                 
-                        
+                        <Link href={"/post/"+props.idPost}>
                         <div className={styleForo.imageSumary}>
                         <Image
                             layout="fill" objectFit="contain"
-                            onClick={onShowImg}
                             src={props.index === 0 ? '' : props.img}
                             className={styleForo.image}
                         />
                         </div>
-                        <Typography ><b style={{padding: '5px'}}>{nameProd}</b></Typography>
-                    
+                        </Link>
+                        <Link href={"/post/"+props.idPost}>
+                        <Typography sx={{marginTop:'10px', cursor: 'pointer'}} ><b style={{padding: '5px', marginLeft: '10px'}}>{nameProd}</b></Typography>
+                        </Link>
             </div>
 
             <ModalImage

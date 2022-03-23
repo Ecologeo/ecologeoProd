@@ -1,6 +1,6 @@
 export const foot = [
     {
-        link: "https://about.ecologeo.com/",
+        link: "/about",
         label: "Acerca de"
     },
     {
@@ -8,11 +8,11 @@ export const foot = [
         label: "Ayuda"
     },
     {
-        link: "https://about.ecologeo.com/terminos-y-condiciones-de-uso/",
+        link: "/condition",
         label: "Términos y condiciones"
     },
     {
-        link: "https://about.ecologeo.com/privacy-policy/",
+        link: "/privacy-policy",
         label: "Política de privacidad"
     }
 ]

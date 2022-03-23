@@ -16,11 +16,11 @@ export default function Condition() {
                 </div>
 
                 <div className={stylesThis.containerText}>
-                    <p>Los t&eacute;rminos que se expresan en el presente contrato establecen las condiciones de uso para todos los servicios prestados actuales y futuros, por Ecologeo.</p>
+                    <p>Los términos que se expresan en el presente contrato establecen las condiciones de uso para todos los servicios prestados actuales y futuros, por Ecologeo.</p>
 
                     <p>El usuario acepta, al momento de empezar a utilizar el servicio, respetar todas las condiciones impuestas por este contrato.</p>
                     <h3>DEFINICIONES</h3>
-                    <p><b>Ecologeo:</b> Es la empresa dedicada a soportar las aplicaciones de Ecologeo, agreg&aacute;ndole nuevas opciones e innovando con nuevas funciones para la comodidad de sus usuarios.</p>
+                    <p><b>Ecologeo:</b> Es la empresa dedicada a soportar las aplicaciones de Ecologeo, agregándole nuevas opciones e innovando con nuevas funciones para la comodidad de sus usuarios.</p>
                     <p><b>Contrato:</b> hace referencia a este contrato y a sus t&eacute;rminos y condiciones.</p>
                     <p><b>Apps:</b> Hace referencia a las aplicaciones tanto web como móvil, sin tener en cuenta a posibles terceros relacionados con Ecologeo.</p>
                     <p><b>Servicios:</b> Todas las aplicaciones que ofrece Ecologeo.</p>

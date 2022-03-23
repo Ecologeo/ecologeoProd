@@ -65,22 +65,28 @@ function Comments(props: any) {
         setId_user(idUser);
     }, [])
 
+    useEffect(() =>{
+        if(props.idPost){
+            getComments('init');
+        }
+    }, [props.idPost]);
+
 
     const closeModal = (e: any) => {
         setShow(!show);
     };
 
-    const getComments = async () => {
+    const getComments = async (page:string) => {
         const params = {
             idPost: props.idPost,
             idComment: props.idComment != undefined ? props.idComment : '',
             pageSize: 5,
-            pageNum: pageComment
+            pageNum: page == 'init'?1:pageComment
         }
         const token = get("@token") ?? '';
         let result = await axios({
             method: 'get',
-            url: config.url_api_foro + "/v1/api/comment/getcommentbypost",
+            url: "/api/post/query/v1-api-comment-getcommentbypost",
             params,
             headers: {
                 'Cache-Control': 'no-cache',
@@ -88,13 +94,17 @@ function Comments(props: any) {
                 'authorization': token
             }
         }).then((response) => {
-            setPageComment(pageComment + 1);
+
+            setPageComment(page == 'init'?2:pageComment + 1);
             return response.data;
         }).catch((error) => {
             //handle error
             //console.log(error);
         });
-        const moreComments = result && result.length > 0 ? concatFilter(dataComment.concat(result)) : dataComment
+
+        let dataCom = page == 'init'? []:dataComment;
+
+        const moreComments = result && result.length > 0 ? concatFilter(dataCom.concat(result)) : dataCom
 
         setDataComment(moreComments);
     }
@@ -112,7 +122,7 @@ function Comments(props: any) {
     useEffect(() => {
         setVisible(props.visible);
         if (props.visible) {
-            getComments();
+            //getComments('load');
         } else {
             setDataComment([])
             setPageComment(1)
@@ -222,7 +232,7 @@ function Comments(props: any) {
     }
 
     const loadMore = async () => {
-        getComments();
+        getComments('load');
     }
 
 

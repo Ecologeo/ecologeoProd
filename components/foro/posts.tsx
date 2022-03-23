@@ -21,6 +21,8 @@ import Stack from '@mui/material/Stack';
 import ModalResponse from "../utils/modalResponse";
 import Image from 'next/image';
 import SumatyPost from './sumaryPost';
+import ListPost from './listPost';
+import OnePost from './onePost';
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
     props,
@@ -218,129 +220,19 @@ function Posts(props: any) {
 
     return (
         <div>
-            <div className="card" style={{padding: '10px 20px', display: 'none' }}>Únete a otros consumidores responsables e impacta en las producciones de las empresas. Conoce más en <a target="_blanck" style={{color:'blue'}} href="https://about.ecologeo.com">about.ecologeo.com</a></div>
+            
             {props.isLoadingPostById ||
                 props.isLoadingPost ||
                 props.isLoadingPostPerfil ?
                 <>{preLoad()}</> :
-                <div className={styles.containerCard}>
+                <div className={props.type==3?styles.containerCardOne:styles.containerCard}>
                     {
 
                         dataPostsInt && dataPostsInt.length > 0 ?
                             dataPostsInt.map((val: any, id) => (
-                                
-                                    <div  key={id} className="cardHome">
-
-                                        <div className="cardHeader">
-
-                                            <div className="linkAll" >
-                                                <a href={"/eco/" + val.user.userName}>
-                                                        <Image
-                                                            src={ val.user.hasOwnProperty('path_avatar') ?val.user.path_avatar:avatar}
-                                                            alt="Avatar"
-                                                            className="avatar"
-                                                            width="40" height="40" 
-                                                            objectFit="cover"
-                                                            objectPosition="center"/> 
-                                                </a>
-                                                <div className="ml10">
-                                                    <a href={"/eco/" + val.user.userName}>
-                                                        <span className="linkName" >{val.user.name}</span>
-                                                        <span className="linkNameRole" >{typeUserData[val.user.role]}</span>
-                                                    </a>
-                                                    
-                                                    
-                                                </div>
-                                            </div>
-                                            {/*<div className={styles.options}>
-                                                <CustomizedMenus
-                                                    removePost={modalConfirmShow}
-                                                    idPost={val._id}
-                                                    typePost={val.typePost}
-                                                    id_user={id_user}
-                                                    userPost={val.user._id}
-                                                    urlImage={val.urlImage} />
-                                                    </div>*/}
-
-                                        </div>
-
-                                        <SumatyPost
-                                            index={1}
-                                            img={val.urlImage}
-                                            characteristic={getCharacteristic(val.character.data, 'character')}
-                                            benefits={getCharacteristic(val.character.data, 'benefit')}
-                                            frequencys={getCharacteristic(val.character.data, 'frequency')}
-                                            skipped={new Set([])}
-                                            typePost={val.typePost}
-                                        />
-                                        <div style={{ fontSize: 12, display: 'flex', marginTop: '5px', alignItems: 'center', paddingLeft: '5px' }}>
-                                                        {
-                                                            calculateTimePost(
-                                                                val.year,
-                                                                val.yearCurrent,
-                                                                val.month,
-                                                                val.monthCurrent,
-                                                                val.day,
-                                                                val.dayCurrent,
-                                                                val.hour,
-                                                                val.hourCurrent,
-                                                                val.minutes,
-                                                                val.minutesCurrent)
-                                                        }
-                                                        {/*!val.hasOwnProperty("userFriend") ?
-                                                            <BtnSeguir
-                                                                idUserSeguir={idUserSeguir}
-                                                                setFollow={setFollow}
-                                                                idUserPost={val.user._id}
-                                                                nameUser={val.user.name}
-                                                                id_user={id_user}
-                                                                backgrounColor={"#FFF"}
-                                                    type={'post'} /> : null*/}
-                                                    </div>
-
-
-
-                                        {/*
-                val.description !== '' ?
-                    <div className="cardBody">
-                        <p className="m15">{val.description}</p>
-                    </div> : null*/
-                                        }
-                                        {/*
-                val.hasOwnProperty('urlImage') ? (
-                    val.hasOwnProperty('typeFile') && val.typeFile === 'video' ?
-                    <div className="cardBody">
-                        <video 
-                            src={val.urlImage} 
-                            
-                            width="600"  
-                            controls
-                            controlsList="nodownload"
-                            >
-                        </video>
-                    </div>:
-                    <div className="cardBody">
-                        <div className={styles.imagePost}>
-                            <img
-                                src={val.urlImage}
-                                className={styles.image} />
-                        </div>
-                    </div>
-                ) : null*/
-                                        }
-
-                                        {/*<ButtonLikes
-                                            item={val}
-                                            id_user={id_user}
-                                            updatePoints={updatePoints}
-                                            showModalComments={showModalComments}
-                                            idPostComment={idPostComment}
-                                            updateIdPostComment={updateIdPostComment}
-                                        />*/}
-
-
-                                    </div>
-
+                                props.type == 3  ?
+                                <OnePost id_user={id_user} id={id} val={val} updatePoints={updatePoints} />:
+                                <ListPost id={id} val={val} />                               
                             )) : 
                             
                             <>{preLoad()}</>

@@ -31,7 +31,7 @@ function ButtonsLike(props: any) {
         props.item.commentsList.length > 0 ? props.item.commentsList[0].count : 0
     );
     const [id_user, setId_user] = useState("");
-    const [visibleComment, setvisibleComment] = useState(false);
+    const [visibleComment, setvisibleComment] = useState(true);
     const [show, setShow] = useState(false);
     const [pathAvatar, setPathAvatar] = useState('')
 
@@ -45,6 +45,14 @@ function ButtonsLike(props: any) {
         const path_avatar = get("@path_avatar_user")?? '';
         setPathAvatar(path_avatar);
     }, []);
+
+    useEffect(()=>{
+        setPoints(props.item.hasOwnProperty("points") ? props.item.points : []);
+        setCountComments(
+            props.item.commentsList.length > 0 ? props.item.commentsList[0].count : 0
+        );
+
+    },[props.item])
 
 
     useEffect(() => {

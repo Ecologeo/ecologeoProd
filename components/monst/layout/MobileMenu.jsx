@@ -1,17 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from 'next/image';
 import logo from '../../../pages/assets/img/logo.png';
 import styles from '../../../pages/home/style.module.scss';
 import ModalAuth from '../../../components/auth/modalAuth';
+import { get } from '../../../utils/SesionStorage';
 
 const MobileMenu = ({ hiddenClass, handleRemove }) => {
     const [isActive, setIsActive] = useState({
         status: false,
         key: "",
     });
+    const [tokenUser, setToken] = useState(null);
     const [show, setShow] = useState(false);
     const [optionAuth, setOptionAuth] = useState(1);
+
+    useEffect(() => {
+        const token = get('@token');
+        setToken(token);
+      }, []);
+
+
 
     const handleToggle = (key) => {
         if (isActive.key === key) {
@@ -67,6 +76,12 @@ const MobileMenu = ({ hiddenClass, handleRemove }) => {
                             
                             
                         </ul>
+                        {tokenUser !== null ?
+                        <div className="mt-4 pt-6 border-t border-blueGray-100">
+                            <Link href="/">
+                                <a className="btn-primary-green block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none  rounded">Inicio</a>
+                            </Link>
+                        </div>:
                         <div className="mt-4 pt-6 border-t border-blueGray-100">
                             <Link href="#">
                                 <a onClick={() => {setShow(!show); setOptionAuth(3); }} className="btn-primary-green block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none  rounded">Regístrate</a>
@@ -75,6 +90,7 @@ const MobileMenu = ({ hiddenClass, handleRemove }) => {
                                 <a onClick={() => {setShow(!show); setOptionAuth(2); }} className="btn-accent block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none border rounded" style={{marginRight:0}}>Inicia Sesión</a>
                             </Link>
                         </div>
+                        }
                     </div>
                     <div className="mt-auto">
                         <p className="my-4 text-xs text-blueGray-400">

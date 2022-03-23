@@ -13,9 +13,10 @@ import { connect } from 'react-redux'
 import SearchEco from '../components/header/search';
 import ModalAuth from '../components/auth/modalAuth';
 import Link from "next/link";
+import Home from "./home";
 
 
-function Home(props: any) {
+function HomeIndex(props: any) {
 
     const [dataPosts, setDataPosts] = useState([]);
     const [id_user, setId_user] = useState('');
@@ -48,6 +49,8 @@ function Home(props: any) {
 
     return (
         <>
+        {id_user != ''?<Home/>:
+        
             <Layout>
                 <section className="xl:bg-contain bg-top bg-no-repeat -mt-24 pt-24" style={{ backgroundImage: "url('assets/imgs/backgrounds/intersect.svg')" }}>
                     <div className="container px-4 mx-auto">
@@ -90,8 +93,10 @@ function Home(props: any) {
                     </div>
 
                 </section>
+                <ModalAuth show={show} closeModal={closeModal} option={optionAuth} />
             </Layout>
-            <ModalAuth show={show} closeModal={closeModal} option={optionAuth} />
+            }
+            
         </>
     );
 }
@@ -109,4 +114,4 @@ const mapStateToProps = (state: any) => ({
     actions: bindActionCreators(foroAction, dispatch)
   })
   
-  export default connect(mapStateToProps, mapDispatchToProps)(Home);
+  export default connect(mapStateToProps, mapDispatchToProps)(HomeIndex);

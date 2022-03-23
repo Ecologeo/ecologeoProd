@@ -49,6 +49,7 @@ const user = router.query.user??''
         postsInfo={dataPosts}
         updatePosts={updatePosts}
         messageError={"No fue posible encontrar el perfil."}
+        type={2}
         />
       </main>
       

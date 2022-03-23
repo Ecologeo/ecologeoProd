@@ -92,10 +92,10 @@ function Home(props: any) {
         <div className={styles.containerCards}>
           <div className={styles.boxCardUser} >
             {id_user != '' ? <CardUser id_user={id_user} /> : null}
-            <FiltersTypes
+            {/*<FiltersTypes
               id_user={id_user}
               onFilterByType={onFilterByType}
-            />
+            />*/}
             <FooterCard />
           </div>
 
@@ -103,6 +103,7 @@ function Home(props: any) {
             <Posts
               postsInfo={dataPosts}
               updatePosts={updatePosts}
+              type={1}
               messageError={"Se ha presentado un error pedimos disculpas por los inconvenientes, vuelve a intentarlo más tarde :) "} />
 
           </div>

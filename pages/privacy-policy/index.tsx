@@ -17,7 +17,7 @@ export default function Home() {
                 </div>
 
                 <div className={stylesThis.containerText}>
-                    <p>Esta política de privacidad rige para todas las aplicaciones móviles para Android creadas por&nbsp;<strong>Ecologeo </strong>y publicadas en la cuenta de desarrollador con el nombre antes mencionado.</p>
+                    <p>Esta política de privacidad rige para todas las aplicaciones móviles para Android creadas por Ecologeo y publicadas en la cuenta de desarrollador con el nombre antes mencionado.</p>
                     <h3>¿Qué tipo de información recolectamos?</h3>
                     <p>Para el correcto funcionamiento de las aplicaciones que construimos o desarrollamos, estos son algunos de los datos que recolectamos:</p>
                     <h4>Ubicación</h4>

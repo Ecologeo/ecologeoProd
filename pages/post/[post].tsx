@@ -39,6 +39,7 @@ const [dataPosts, setDataPosts] = useState([])
         <Posts 
         postsInfo={dataPosts}
         updatePosts={updatePosts}
+        type={3}
         messageError={"No encontramos este Post Pero puedes seguir explorando más en el inicio "}
         />
       </main>
