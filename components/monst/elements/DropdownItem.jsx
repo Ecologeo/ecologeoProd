@@ -8,7 +8,7 @@ class DropdownItem extends React.Component {
     };
 
     onDropdownClicked = () => {
-        this.setState((prevState:any) => ({
+        this.setState((prevState) => ({
             isDropdownOpen: !prevState.isDropdownOpen,
             dropdownToggleIcon: prevState.dropdownToggleIcon === "+" ? "-" : "+"
         }));
