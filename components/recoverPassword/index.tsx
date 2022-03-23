@@ -1,7 +1,7 @@
 import React, { ChangeEventHandler, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaRegEye } from "react-icons/fa";
-import styles from '../../pages/recoverpassword/styles.module.scss';
+import styles from '../../pages/recoverPassword/stylesrp.module.scss';
 
 export default function RecoverPasswordComponent(props: any) {
   const {

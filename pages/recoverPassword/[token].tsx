@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import * as authAction from "../../actions/auth";
 import { bindActionCreators } from "redux";
 import RecoverPasswordComponent from "../../components/recoverPassword";
-import styles from './styles.module.scss';
+import stylesrp from './stylesrp.module.scss';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import ReactGA from 'react-ga4';
@@ -39,22 +39,22 @@ function RecoverPassword(props: any) {
     return (
 
         <>
-            <div className={styles.container}>
-                <div className={[styles.card, styles.shadow].join(' ')}>
-                    <div className={styles.cardBody}>
-                        <div className={styles.containerLogo}>
-                        <Link href="/"><div className={styles.divLogo}><Image src={logo} alt="Ecololgeo Logo" layout="fill" /></div></Link>
+            <div className={stylesrp.container}>
+                <div className={[stylesrp.card, stylesrp.shadow].join(' ')}>
+                    <div className={stylesrp.cardBody}>
+                        <div className={stylesrp.containerLogo}>
+                        <Link href="/"><div className={stylesrp.divLogo}><Image src={logo} alt="Ecololgeo Logo" layout="fill" /></div></Link>
                         </div>
                         <hr />
                         {!props.dataResetPassword ? (
                             <RecoverPasswordComponent onSubmit={onSubmit} />
                         ) : (
-                            <div className={styles.successResetPassword}>
+                            <div className={stylesrp.successResetPassword}>
                                 La constraseña se restableció con éxito
                             </div>
                         )}
                         {props.error && !props.dataResetPassword && (
-                            <div className={styles.successResetPassword}>
+                            <div className={stylesrp.successResetPassword}>
                                 Ocurrió un error al restablecer la contraseña
                             </div>
                         )}
