@@ -53,7 +53,7 @@ function UpdatePerfil(props: any) {
     const [urls, setUrls] = useState<Array<any>>([]);
     const [names, setNames] = useState('');
     const [userName, setUserName] = useState('');
-    const [urlImg, setUrlImg] = useState(null);
+    const [urlImg, setUrlImg] = useState<any>(null);
     const [urlImgd, setUrlImgd] = useState(null);
     const [typeUser, setTypeUser] = useState('');
     const [birthdate, setBirthdate] = useState(new Date());
@@ -259,7 +259,7 @@ function UpdatePerfil(props: any) {
                         {urlImg !== null ?
                             <img
                             ref={imgEl}
-                            src={urlImg !== null ? '' + urlImg : (path_avatar !== '' ? path_avatar : avatar)}
+                            src={urlImg !== null ? urlImg : (path_avatar !== '' ? path_avatar : avatar)}
                             alt="Avatar"
                             className="avatar avatarPerfil" />:
                             <div className="avatarPerfil">

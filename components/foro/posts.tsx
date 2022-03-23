@@ -183,7 +183,7 @@ function Posts(props: any) {
     }
 
 
-    const handleCloseAlert = (event?: React.SyntheticEvent, reason?: string) => {
+    const handleCloseAlert = (event?: React.SyntheticEvent | Event, reason?: string) => {
         if (reason === 'clickaway') {
             return;
         }

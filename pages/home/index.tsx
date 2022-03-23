@@ -15,7 +15,7 @@ import FiltersTypes from '../../components/foro/filtersTypes';
 import FooterCard from '../../components/footer/footerCard';
 import GA4React, { useGA4React } from "ga-4-react";
 import ReactGA from "react-ga4";
-import ModalMessage from "../../components/foro/modalMessage";
+//import ModalMessage from "../../components/foro/modalMessage";
 
 
 

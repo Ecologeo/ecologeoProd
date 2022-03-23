@@ -1,7 +1,7 @@
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
-function CounterUp({ count, time }) {
+function CounterUp({ count, time }:any) {
     return (
         <>
             {/* {/ <CountUp end={count} duration={3}/> /} */}

@@ -8,7 +8,7 @@ class DropdownItem extends React.Component {
     };
 
     onDropdownClicked = () => {
-        this.setState((prevState) => ({
+        this.setState((prevState:any) => ({
             isDropdownOpen: !prevState.isDropdownOpen,
             dropdownToggleIcon: prevState.dropdownToggleIcon === "+" ? "-" : "+"
         }));
@@ -24,7 +24,7 @@ class DropdownItem extends React.Component {
                     </button>
                 </div>
                 <Collapse isOpened={this.state.isDropdownOpen}>
-                    <div className={displayText}>{this.props.children}</div>
+                    <div className={"displayText"}>{this.props.children}</div>
                 </Collapse>
             </div>
         );
