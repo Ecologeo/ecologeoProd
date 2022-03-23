@@ -161,7 +161,7 @@ export default function Search(props:any) {
                                             <>
                                             <p className={styles.pModalSearch}>Cuentas:</p>
                                             {searchResults.users.map((val:any, id:any)=>(
-                                                <a href={"/eco/" + val.userName}>
+                                                <a key={id} href={"/eco/" + val.userName}>
                                                 <MenuItem>
                                                 <div style={{display: 'block'}}>
                                                     <p className={stylePerfil.pnameSearch}>{val.name}</p>
@@ -188,7 +188,7 @@ export default function Search(props:any) {
                                             <>
                                             <p className={styles.pModalSearch}>Productos:</p>
                                             {searchResults.post.map((val:any, id:any)=>(
-                                                <a href={"/post/" + val.post}><MenuItem >
+                                                <a key={id} href={"/post/" + val.post}><MenuItem >
                                                    {val.value}
                                                 </MenuItem>
                                                 </a> 

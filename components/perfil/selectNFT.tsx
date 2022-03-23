@@ -239,10 +239,12 @@ function SelectNft(props: any) {
                         getOptionLabel={(option) => option}
                         renderTags={(tagValue, getTagProps) =>
                             tagValue.map((option, index) => (
-                            <Chip
+                                <span key={index}>
+                            <Chip 
                                 label={option}
                                 {...getTagProps({ index })}
                             />
+                            </span>
                             ))
                         }
                         style={{ margin:'10px' }}
@@ -262,10 +264,12 @@ function SelectNft(props: any) {
                         getOptionLabel={(option) => option+"P"}
                         renderTags={(tagValue, getTagProps) =>
                             tagValue.map((option, index) => (
+                            <span key={index}>
                             <Chip
                                 label={option+"P"}
                                 {...getTagProps({ index })}
                             />
+                            </span>
                             ))
                         }
                         style={{ margin:'10px' }}

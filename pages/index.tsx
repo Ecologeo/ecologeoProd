@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import CounterUp from "../components/monst/elements/Counterup"
 import TextEffect from "../components/monst/elements/TextEffect"
 import Layout from "../components/monst/layout/Layout"
-import Slider1 from "../components/monst/slider/Slider1"
 import styles from './home/style.module.scss'
 import Posts from '../components/foro/posts';
 import ReactGA from "react-ga4";

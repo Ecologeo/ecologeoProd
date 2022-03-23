@@ -151,6 +151,7 @@ let steps:any = ['Subir imagen', 'Características', 'Confirmar'];
                 <>
                   <p>Se publicó exitosamente la recomendación del producto ecológico con nombre: </p>
                   <a
+                    rel="noreferrer"
                     style={{ textDecoration: 'underline', color: "#3cb371" }}
                     href={config.url_web + "post/" + dataPost.data._id} target={'_blank'}> {nameProduct} </a>
                 </> :

@@ -31,7 +31,7 @@ const Footer = () => {
                     <div className="flex flex-col lg:flex-row items-center lg:justify-between">
                         <p className="text-sm text-blueGray-400">
                             &copy; 2022. All rights reserved. Designed by{" "}
-                            <a className="text-blue-400" href="https://ecologeo.com" target="_blank">
+                            <a className="text-blue-400" href="https://ecologeo.com" target="_blank" rel="noreferrer">
                                 ecologeo.com
                             </a>
                         </p>

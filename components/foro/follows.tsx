@@ -170,7 +170,7 @@ function Follows(props: any) {
                 {
                     dataFld.length > 0 ?
                         dataFld.map((val: any, id: any) => (
-                           <div>{renderFollow(val.user, id)}</div> 
+                           <div key={id}>{renderFollow(val.user, id)}</div> 
                         )) :
                         <div>
                             {props.isLoading ?
@@ -184,7 +184,7 @@ function Follows(props: any) {
                 {
                     dataFls.length > 0 ?
                         dataFls.map((val: any, id: any) => (
-                            <div>{renderFollow(val.user, id)}</div> 
+                            <div key={id}>{renderFollow(val.user, id)}</div> 
                          )) :
                         <div>
                             {props.isLoadingSearchPost ?

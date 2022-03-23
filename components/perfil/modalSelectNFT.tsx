@@ -103,7 +103,7 @@ function useModalAuth(props: any) {
                     <div className={styleThis.boxImageNft}>
                     {
                         imagesNft.map((val:any,id) =>(
-                            <div className={styleThis.divImgNft}>
+                            <div key={id} className={styleThis.divImgNft}>
                             <img className={styleThis.imgNft} key={id} src={val.urlImage} width="149"  />       
                             <FormControlLabel control={<Checkbox disabled={!checked.includes(val._id) && checked.length == Math.trunc(52/50) } checked={checked.includes(val._id)} onChange={(e) =>handleChange(e,val._id)}   />} label={val.name} />
                            </div>                     

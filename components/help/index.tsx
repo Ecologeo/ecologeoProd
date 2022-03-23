@@ -108,7 +108,7 @@ export default function Help() {
     return (
         <div className={styles.containerHelp}>
             <div className={styles.divLinkWE} >
-                <a className={styles.linkWE} target="_blank" href="http://api.whatsapp.com/send?phone=+573127403022"> 
+                <a className={styles.linkWE} target="_blank" rel="noreferrer" href="http://api.whatsapp.com/send?phone=+573127403022"> 
                 <WhatsAppIcon /> 
                 <span className={styles.spanWE} >3127403022</span>
                 </a>

@@ -11,7 +11,7 @@ import OptionsTypePost from "../../../components/create/optionTypePost";
 import ReactGA from 'react-ga4';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useRouter } from 'next/router'
-import withAuth from '../../../components/auth/withAuth';
+import WithAuth from '../../../components/auth/withAuth';
 
 function CreatePost(props: any) {
 
@@ -105,4 +105,4 @@ const mapDispatchToProps = (dispatch: any) => ({
     actions: bindActionCreators(foroAction, dispatch)
 })
 
-export default withAuth(connect(mapStateToProps, mapDispatchToProps)(CreatePost));
+export default WithAuth(connect(mapStateToProps, mapDispatchToProps)(CreatePost));

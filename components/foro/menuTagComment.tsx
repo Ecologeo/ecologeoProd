@@ -172,7 +172,7 @@ export default function TagComment(props: any) {
                                                         && searchResults.users.length > 0 ?
                                                         <>
                                                             {searchResults.users.map((val: any, id: any) => (
-                                                                    <MenuItem onClick={(e) => props.setAccountText(searchTerm, val.userName)} >
+                                                                    <MenuItem key={id} onClick={(e) => props.setAccountText(searchTerm, val.userName)} >
                                                                         <div  style={{ display: 'block' }}>
                                                                             <p className={stylePerfil.pnameSearch}>{val.name}</p>
                                                                             <p className={stylePerfil.pUsernameSearch}>@{val.userName}</p>
