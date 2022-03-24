@@ -16,6 +16,6 @@
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/index.js", "index.d.ts"
-    , "src/components/create/currencyTextField.js", "src/components/create/currencyTextField.js", "src/firebase.js", "components/monst/elements/DropdownItem.jsx" ],
+    , "src/components/create/currencyTextField.js", "src/components/create/currencyTextField.js", "src/firebase.js", "components/monst/elements/DropdownItem.jsx", "components/auth/withAuth.jsx", "components/auth/withAuth.jsx" ],
   "exclude": ["node_modules"]
 }
