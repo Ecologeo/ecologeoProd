@@ -9,6 +9,7 @@ import AcordionPost from './acordionPost';
 import CustomizedMenus from './menuPost';
 import BtnSeguir from './btnSeguir';
 import styles from './style.module.scss';
+import { getNameUrl } from '../../utils'
 
 const typeUserData: any = {
     'noData': 'Tipo de usuario sin definir',
@@ -121,6 +122,7 @@ export default function OnePost(props: any) {
                                                 <CustomizedMenus
                                                     removePost={modalConfirmShow}
                                                     idPost={props.val._id}
+                                                    namePost={getNameUrl(getCharacteristic(props.val.character.data, 'character') )}
                                                     typePost={props.val.typePost}
                                                     id_user={id_user}
                                                     userPost={props.val.user._id}

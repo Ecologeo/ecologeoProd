@@ -20,7 +20,7 @@ const About = () => {
                                 </h2>
                             </div>
                             <div className="w-full lg:w-1/2">
-                                <p className="text-blueGray-500 text-justify leading-loose wow animate__animatedanimated animate__fadeIn">Ecologeo es una plataforma social donde los consumidores responsables se pueden unir a campañas ecológicas solo con publicar sus recomendaciones. Las campañas son representadas con reportes e indicadores especializados que agrupan sus demandas, criterios u opiniones.  y estas campañas podrán llegar a tomadores de decisiones en las regiones.</p>
+                                <p className="text-blueGray-500 text-justify leading-loose wow animate__animatedanimated animate__fadeIn">Ecologeo es una plataforma social donde los consumidores responsables se pueden unir a campañas ecológicas solo con publicar sus recomendaciones. Las campañas son representadas con reportes e indicadores especializados que agrupan sus demandas, criterios u opiniones. Y estas campañas podrán llegar a tomadores de decisiones en las regiones.</p>
                             </div>
                         </div>
                         <div className="flex flex-wrap -mx-3 -mb-6 text-center">
@@ -57,7 +57,7 @@ const About = () => {
                         <div className="max-w-lg mx-auto mb-12 text-center">
                             <h2 className="my-2 text-3xl md:text-4xl font-bold font-heading wow animate__animated animate__fadeIn" data-wow-delay=".1s">
                             Publicaciones que <br />
-                               podras <span className="text-blue-500">realizar y explorar</span>
+                               podrás <span className="text-blue-500">realizar y explorar</span>
                             </h2>
                             <p className="text-blueGray-500 leading-loose wow animate__animated animate__fadeIn" data-wow-delay=".3s">
                                 En las publicaciones podrás expresar tus opiniones, criterios o demandas que veas necesarias que se implementen en las empresas e instituciones.

@@ -11,6 +11,7 @@ import ReactGA from 'react-ga4';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import config from '../../../config';
+import { getNameUrl } from '../../../utils';
 
 function Post(props:any) {
 
@@ -52,12 +53,6 @@ const [dataPosts, setDataPosts] = useState([])
 }
 
 
-function getName(data:any){
-  console.log("data: ", data);
-  const name:any = data.filter((el: any) => el.key == 'name');
-  return name[0].value.toLowerCase().split(" ").join("-");
-}
-
 const getCharacteristic = (data: any, type: any) => {
   return data.filter((elemt: any) => elemt.type === type);
 }
@@ -90,7 +85,7 @@ export async function getStaticPaths() {
     
       // Get the paths we want to pre-render based on posts
       const paths = dataPosts.map((post:any) => ({
-        params: { post: post._id, name: getName(getCharacteristic(post.character.data, 'character') ) },
+        params: { post: post._id, name: getNameUrl(getCharacteristic(post.character.data, 'character') ) },
       }))
 
       // We'll pre-render only these paths at build time.

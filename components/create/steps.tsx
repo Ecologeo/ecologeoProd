@@ -10,9 +10,10 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import config from '../../config';
 import stylesThis from '../../pages/create/styles.module.scss';
-import { connect } from 'react-redux'
-import * as foroAction from '../../actions/foro'
-import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux';
+import * as foroAction from '../../actions/foro';
+import { bindActionCreators } from 'redux';
+import { getNameUrlSimple } from '../../utils';
 
 let steps:any = ['Subir imagen', 'Características', 'Confirmar'];
 
@@ -153,7 +154,7 @@ let steps:any = ['Subir imagen', 'Características', 'Confirmar'];
                   <a
                     rel="noreferrer"
                     style={{ textDecoration: 'underline', color: "#3cb371" }}
-                    href={config.url_web + "post/" + dataPost.data._id} target={'_blank'}> {nameProduct} </a>
+                    href={config.url_web + "post/" + dataPost.data._id+"/"+getNameUrlSimple(nameProduct)} target={'_blank'}> {nameProduct} </a>
                 </> :
                 <>
                   <p>No fue posible publicar la recomendación, por favor comunícaselo al soporte de Ecologeo.</p>

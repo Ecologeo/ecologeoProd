@@ -79,7 +79,7 @@ export default function MenuListComposition(props:any) {
     
     
     var textField = document.createElement('textarea')
-    textField.innerText = 'https://ecologeo.com/post/'+props.idPost
+    textField.innerText = 'https://ecologeo.com/post/'+props.idPost+'/'+props.namePost
     document.body.appendChild(textField)
     textField.select()
     document.execCommand('copy')

@@ -47,3 +47,11 @@ export  const  concatFilter = (array3) =>{
     }
     return a;
 }
+
+export const getNameUrl = (data) =>{
+    const name = data.filter((el) => el.key == 'name');
+    return name[0].value.replace("%","").replace("/","").toLowerCase().split(" ").join("-");
+  }
+export const getNameUrlSimple = (name) =>{
+    return name.replace("%","").replace("/","").toLowerCase().split(" ").join("-");
+  }

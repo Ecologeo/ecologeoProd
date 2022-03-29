@@ -14,7 +14,7 @@ import Paper from '@mui/material/Paper';
 import { charact, type, sello } from '../create/data/characteristics';
 import { benefit } from '../create/data/benefits';
 import { frequency } from "../create/data/frequency";
-import { capitalize } from '../../utils';
+import { capitalize, getNameUrlSimple } from '../../utils';
 import ModalImage from './modalImage';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -134,17 +134,14 @@ export default function SumaryPost(props: any) {
         setOpenImage(false)
     }
     
-    const nameByUrl = (name:any) => {
-        return name.toLowerCase().split(" ").join("-");
-    }
-
+    
 
     return (
         <div >
 
             <div className={styleForo.cardBodySummary}>
                 
-                        <Link href={"/post/"+props.idPost+"/"+nameByUrl(nameProd)}>
+                        <Link href={"/post/"+props.idPost+"/"+getNameUrlSimple(nameProd)}>
                         <div className={styleForo.imageSumary}>
                         <Image
                             layout="fill" objectFit="contain"
@@ -153,7 +150,7 @@ export default function SumaryPost(props: any) {
                         />
                         </div>
                         </Link>
-                        <Link href={"/post/"+props.idPost+"/"+nameByUrl(nameProd)}>
+                        <Link href={"/post/"+props.idPost+"/"+getNameUrlSimple(nameProd)}>
                         <Typography sx={{marginTop:'10px',
                          cursor: 'pointer', 
                          textAlign: 'left',
