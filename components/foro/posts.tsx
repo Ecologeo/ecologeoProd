@@ -221,10 +221,6 @@ function Posts(props: any) {
     return (
         <div>
             
-            {props.isLoadingPostById ||
-                props.isLoadingPost ||
-                props.isLoadingPostPerfil ?
-                <>{preLoad()}</> :
                 <div className={props.type==3?styles.containerCardOne:styles.containerCard}>
                     {
 
@@ -237,7 +233,7 @@ function Posts(props: any) {
                             
                             <>{preLoad()}</>
                     }
-                </div>}
+                </div>
 
 
             <ModalConfirm
