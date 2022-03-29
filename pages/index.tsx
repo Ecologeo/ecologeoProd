@@ -26,7 +26,7 @@ function HomeIndex(props: any) {
     useEffect(() => {
         const idUser = get("@id_user") ?? '';
         setId_user(idUser);
-        props.actions.getPosts({ idUser, pageNum: 1 });
+        //props.actions.getPosts({ idUser, pageNum: 1 });
         ReactGA.send({ hitType: "pageview", page: window.location.pathname });
         setDataPosts(props.dataPosts);
       }, []);
@@ -144,7 +144,7 @@ export async function getStaticProps() {
   }
 
 const mapStateToProps = (state: any) => ({
-    dataPosts: state.foro.dataPosts,
+    //dataPosts: state.foro.dataPosts,
     isLoadingPost: state.foro.isLoadingPost,
     pageForo: state.foro.pageForo,
     error: state.foro.error,
