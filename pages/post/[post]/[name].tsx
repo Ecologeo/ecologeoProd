@@ -8,7 +8,7 @@ import Header from '../../../components/header';
 import Posts from '../../../components/foro/posts';
 import { get } from '../../../utils/SesionStorage';
 import ReactGA from 'react-ga4';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 import axios from 'axios';
 import config from '../../../config';
 
@@ -18,11 +18,11 @@ const [dataPosts, setDataPosts] = useState([])
 
   const router = useRouter();
 
-  const idPost = router.query.post;
+  //const idPost = router.query.post;
 
   useEffect(()=>{
     const idUser = get("@id_user") ?? '000000000000000000000000';
-    props.actions.getPostsById({ idPost, idUser });
+    //props.actions.getPostsById({ idPost, idUser });
     ReactGA.send({ hitType: "pageview", page: '/post' });
   },[])  
 
@@ -51,47 +51,6 @@ const [dataPosts, setDataPosts] = useState([])
   )
 }
 
-export async function getStaticProps() {
-
-  const params =  { idUser: '', pageNum: 1 }
-  const url = config.url_api_foro +"/v1/api/post/posts"; //: "/api/post/query/v1-api-post-postByUser"
-  
-  try {
-      let res = await axios({
-          method: 'get',
-          url,
-          params,
-          headers: {
-              'Cache-Control': 'no-cache',
-              'content-type': 'application/json',
-              'authorization': ''
-          }
-      }).then((response) => {
-  
-          return response.data;
-      }).catch((error) => {
-          //handle error
-          //console.log(error);
-          console.log("error: ", error)
-      });  
-  
-      //const res = await fetch('https://.../posts')
-      const dataPosts =  res;
-    
-      return {
-        props: {
-          dataPosts,
-        },
-        // Next.js will attempt to re-generate the page:
-        // - When a request comes in
-        // - At most once every 10 seconds
-        revalidate: 10, // In seconds
-      }
-  } catch (error) {
-      console.log("error2: ",error);
-  }
-
-}
 
 function getName(data:any){
   console.log("data: ", data);
@@ -146,10 +105,53 @@ export async function getStaticPaths() {
   
 }
 
+export async function getStaticProps({params}:any) {
+
+  const data =  { idPost: params.post, idUser: "000000000000000000000000" }
+  const url = config.url_api_foro +"/v1/api/post/postById"; //: "/api/post/query/v1-api-post-postByUser"
+  
+  try {
+      let res = await axios({
+          method: 'get',
+          url,
+          params:data,
+          headers: {
+              'Cache-Control': 'no-cache',
+              'content-type': 'application/json',
+              'authorization': ''
+          }
+      }).then((response) => {
+  
+          return response.data;
+      }).catch((error) => {
+          //handle error
+          //console.log(error);
+          console.log("error: ", error)
+      });  
+  
+      //const res = await fetch('https://.../posts')
+      const dataPostByID =  res;
+    
+      return {
+        props: {
+          dataPostByID,
+        },
+        // Next.js will attempt to re-generate the page:
+        // - When a request comes in
+        // - At most once every 10 seconds
+        revalidate: 10, // In seconds
+      }
+  } catch (error) {
+      console.log("error2: ",error);
+  }
+
+}
+
+
 
 const mapStateToProps = (state: any) => ({
     isLoadingPostById: state.foro.isLoadingPostById,
-    dataPostByID: state.foro.dataPostByID,
+    //dataPostByID: state.foro.dataPostByID,
     errorPostById: state.foro.errorPostById,
   })
   
