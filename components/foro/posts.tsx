@@ -224,14 +224,12 @@ function Posts(props: any) {
                 <div className={props.type==3?styles.containerCardOne:styles.containerCard}>
                     {
 
-                        dataPostsInt && dataPostsInt.length > 0 ?
+                        
                             dataPostsInt.map((val: any, id) => (
                                 props.type == 3  ?
                                 <OnePost id_user={id_user} id={id} val={val} updatePoints={updatePoints} />:
                                 <ListPost id={id} val={val} />                               
-                            )) : 
-                            
-                            <>{preLoad()}</>
+                            )) 
                     }
                 </div>
 
