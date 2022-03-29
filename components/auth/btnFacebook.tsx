@@ -32,13 +32,13 @@ function BtnFacebook(props: any) {
     }, [props.dataFacebook])
 
     const responseFacebook = (response: any) => {
+        /*path_avatar: response.picture.data.url,*/
         try{
             const data = {
                 email: response.email,
                 name: response.name,
                 idFacebook: response.id,
                 tokenFacebook: response.accessToken,
-                path_avatar: response.picture.data.url,
                 tokenDivece: '',
                 role: 'noData',
             }

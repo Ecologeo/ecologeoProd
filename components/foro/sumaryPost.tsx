@@ -133,56 +133,9 @@ export default function SumaryPost(props: any) {
     const onCloseImg = () => {
         setOpenImage(false)
     }
-    const onShowImg = () => {
-        setOpenImage(true)
-    }
-
-    const textPost = () => {
-        switch (props.typePost) {
-            case 1:
-                return <p className={styleForo.askThink}>¿Qué opinan de este producto ecológico?</p>
-            case 2:
-                return <p className={styleForo.askThink}>Recomendación</p>
-            case 3:
-                return <p className={styleForo.askThink}>Hallazgo</p>
-        }
-    }
-
-    const showItemAccordion = () => {
-        switch (props.typePost) {
-            case 2:
-                return <>
-                    <Accordion disabled={(benefits.length === 0 || skipped.has(2))} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-                            <Typography>Beneficios</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            {renderTables(benefits, benefit, 'benefit')}
-                        </AccordionDetails>
-                    </Accordion>
-                    <Accordion disabled={(frequencys.length === 0 || skipped.has(3))} expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-                            <Typography>Frecuencia de compra</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            {renderTables(frequencys, frequency, 'frequency')}
-                        </AccordionDetails>
-                    </Accordion>
-                </>
-            case 3:
-                return <>
-                    <Accordion disabled={(benefits.length === 0 || skipped.has(2))} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-                            <Typography>Beneficios</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            {renderTables(benefits, benefit, 'benefit')}
-                        </AccordionDetails>
-                    </Accordion>
-                </>
-            default:
-                return null;
-        }
+    
+    const nameByUrl = (name:any) => {
+        return name.toLowerCase().split(" ").join("-");
     }
 
 
@@ -191,7 +144,7 @@ export default function SumaryPost(props: any) {
 
             <div className={styleForo.cardBodySummary}>
                 
-                        <Link href={"/post/"+props.idPost}>
+                        <Link href={"/post/"+props.idPost+"/"+nameByUrl(nameProd)}>
                         <div className={styleForo.imageSumary}>
                         <Image
                             layout="fill" objectFit="contain"
@@ -200,8 +153,14 @@ export default function SumaryPost(props: any) {
                         />
                         </div>
                         </Link>
-                        <Link href={"/post/"+props.idPost}>
-                        <Typography sx={{marginTop:'10px', cursor: 'pointer'}} ><b style={{padding: '5px', marginLeft: '10px'}}>{nameProd}</b></Typography>
+                        <Link href={"/post/"+props.idPost+"/"+nameByUrl(nameProd)}>
+                        <Typography sx={{marginTop:'10px',
+                         cursor: 'pointer', 
+                         textAlign: 'left',
+                         padding: '5px', 
+                         marginLeft: '10px' }} >
+                             <b>{nameProd}</b>
+                        </Typography>
                         </Link>
             </div>
 

@@ -20,6 +20,8 @@ export default async function handler(req, res) {
         confg['data'] =  req.body;
     }
 
+    console.log("confg: ",confg);
+
     let result = await axios(confg)
     .then((response) => {
         return response.data;
@@ -31,6 +33,9 @@ export default async function handler(req, res) {
             //console.log("error: ", error);
         }
     });
+
+    console.log("result: ", result);
+
     if(req.method == 'POST'){
         res.status(201).send(result);
     }else{

@@ -12,6 +12,8 @@ import SearchEco from '../components/header/search';
 import ModalAuth from '../components/auth/modalAuth';
 import Link from "next/link";
 import Home from "./home";
+import axios from 'axios';
+import config from '../config';
 
 
 function HomeIndex(props: any) {
@@ -26,10 +28,10 @@ function HomeIndex(props: any) {
         setId_user(idUser);
         props.actions.getPosts({ idUser, pageNum: 1 });
         ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-        
+        setDataPosts(props.dataPosts);
       }, []);
 
-      useEffect(() => {
+    useEffect(() => {
         setDataPosts(props.dataPosts);
     }, [props.dataPosts])
 
@@ -42,7 +44,7 @@ function HomeIndex(props: any) {
         setShow(!show);
     };
 
-    
+     
 
 
     return (
@@ -99,6 +101,48 @@ function HomeIndex(props: any) {
     );
 }
 
+export async function getStaticProps() {
+
+    const params =  { idUser: '', pageNum: 1 }
+    const url = config.url_api_foro +"/v1/api/post/posts"; //: "/api/post/query/v1-api-post-postByUser"
+    
+    try {
+        let res = await axios({
+            method: 'get',
+            url,
+            params,
+            headers: {
+                'Cache-Control': 'no-cache',
+                'content-type': 'application/json',
+                'authorization': ''
+            }
+        }).then((response) => {
+    
+            return response.data;
+        }).catch((error) => {
+            //handle error
+            //console.log(error);
+            console.log("error: ", error)
+        });  
+    
+        //const res = await fetch('https://.../posts')
+        const dataPosts =  res;
+      
+        return {
+          props: {
+            dataPosts,
+          },
+          // Next.js will attempt to re-generate the page:
+          // - When a request comes in
+          // - At most once every 10 seconds
+          revalidate: 10, // In seconds
+        }
+    } catch (error) {
+        console.log("error2: ",error);
+    }
+
+  }
+
 const mapStateToProps = (state: any) => ({
     dataPosts: state.foro.dataPosts,
     isLoadingPost: state.foro.isLoadingPost,
@@ -112,4 +156,5 @@ const mapStateToProps = (state: any) => ({
     actions: bindActionCreators(foroAction, dispatch)
   })
   
-  export default connect(mapStateToProps, mapDispatchToProps)(HomeIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeIndex);
+//export default HomeIndex;

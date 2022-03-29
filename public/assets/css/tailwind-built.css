@@ -408,9 +408,9 @@ input,
 optgroup,
 select,
 textarea {
-  padding: 0;
-  /*line-height: inherit;*/
-  color: inherit;
+  /*padding: 0;
+  /*line-height: inherit;
+  color: inherit;*/
 }
 /**
  * Use the configured 'mono' font family for elements that
